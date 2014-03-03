@@ -1,8 +1,16 @@
+#= require vendor/modernizr.js
+#
 # dashing.js is located in the dashing framework
 # It includes jquery & batman for you.
 #= require dashing.js
 
-#= require_directory .
+#= require vendor/d3-3.2.8
+#= require vendor/fastclick
+#= require vendor/jquery.cookie
+#= require vendor/jquery.knob
+#= require vendor/rickshaw-1.4.3.min
+#
+#= require foundation
 #= require_tree ../../widgets
 
 console.log("Yeah! The dashboard has started!")
