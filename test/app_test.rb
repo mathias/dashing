@@ -91,7 +91,7 @@ class AppTest < Dashing::Test
     with_generated_project do
       get '/sampletv'
       assert_equal 200, last_response.status
-      assert_includes last_response.body, 'class="gridster"'
+      assert_includes last_response.body, 'class="dashboard"'
       assert_includes last_response.body, "DOCTYPE"
     end
   end
@@ -105,10 +105,10 @@ class AppTest < Dashing::Test
 
   def test_get_haml_dashboard
     with_generated_project do |dir|
-      File.write(File.join(dir, 'dashboards/hamltest.haml'), '.gridster')
+      File.write(File.join(dir, 'dashboards/hamltest.haml'), '.dashboard')
       get '/hamltest'
       assert_equal 200, last_response.status
-      assert_includes last_response.body, "class='gridster'"
+      assert_includes last_response.body, "class='dashboard'"
     end
   end
 
